@@ -1,6 +1,12 @@
 /* header */
 
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	background-color: #fff;
 	padding: 17px 0;
 	box-shadow: 0px 4px 14px rgba(0, 169, 224, 0.1);
 
@@ -42,6 +48,8 @@
 
 .menu {
 
+	position: relative;
+	z-index: 2;
 	transition: .2s linear;
 
 	@media (max-width: 900px) {
@@ -132,6 +140,10 @@
 
 	@media (max-width: 900px) {
 		padding-top: 0;
+	}
+
+	@media (max-width: 565px) {
+		padding: 0;
 	}
 
 	&__wrapper {
@@ -239,7 +251,8 @@
 	padding-bottom: 80px;
 
 	@media (max-width: 565px) {
-		padding-bottom: 40px;
+		padding: 30px 0;
+		background-color: #fff;
 	}
 
 	&__inner {}
@@ -359,13 +372,17 @@
 			display: flex;
 			align-items: center;
 		}
+
+		@media (min-width: 566px) {
+			text-align: center;
+		}
 	}
 
 	&__icon {
 		margin-bottom: 13px;
 
 		@media (max-width: 800px) {
-			margin: 0 auto 5px;
+			margin: 0 0 5px;
 		}
 
 		@media (max-width: 565px) {
@@ -388,6 +405,86 @@
 
 		@media (max-width: 565px) {
 			flex-direction: column;
+		}
+	}
+}
+
+/* howto */
+
+.howto {
+	&__inner {
+		padding: 50px 0;
+		text-align: center;
+
+		@media (max-width: 992px) {
+			padding: 30px 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 55px;
+
+		@media (max-width: 992px) {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__image {
+		margin-bottom: 70px;
+
+		&--sm {
+			width: 100%;
+			margin-bottom: 45px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		margin: 0 -35px;
+
+		@media (max-width: 992px) {
+			flex-direction: column;
+		}
+	}
+
+	&__column {
+		flex: 0 1 33.33333%;
+		padding: 0 35px;
+
+		@media (max-width: 992px) {
+			&:not(:last-child) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&__item {
+		@media (max-width: 992px) {
+			display: flex;
+			align-items: center;
+			text-align: left;
+		}
+	}
+
+	&__icon {
+		width: 70px;
+		height: 70px;
+		margin-bottom: 20px;
+
+		@media (max-width: 992px) {
+			width: 64px;
+			height: 64px;
+			margin: 0 20px 0 0;
+		}
+	}
+
+	&__text {
+		font-size: 22px;
+		line-height: 119.7%;
+		color: #272727;
+
+		@media (max-width: 600px) {
+			font-size: 18px;
 		}
 	}
 }

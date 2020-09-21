@@ -31,7 +31,6 @@ dd {
 /* Make images easier to work with */
 img {
   max-width: 100%;
-  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -115,8 +114,30 @@ main {
   background-color: #FDBF3B;
 }
 
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 119.7%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #001E46;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
 /* header */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: #fff;
   padding: 17px 0;
   box-shadow: 0px 4px 14px rgba(0, 169, 224, 0.1);
 }
@@ -160,6 +181,8 @@ main {
 }
 
 .menu {
+  position: relative;
+  z-index: 2;
   transition: .2s linear;
 }
 
@@ -261,6 +284,12 @@ main {
 @media (max-width: 900px) {
   .intro {
     padding-top: 0;
+  }
+}
+
+@media (max-width: 565px) {
+  .intro {
+    padding: 0;
   }
 }
 
@@ -391,7 +420,8 @@ main {
 
 @media (max-width: 565px) {
   .benefits {
-    padding-bottom: 40px;
+    padding: 30px 0;
+    background-color: #fff;
   }
 }
 
@@ -526,13 +556,19 @@ main {
   }
 }
 
+@media (min-width: 566px) {
+  .opportunities-benefits__item {
+    text-align: center;
+  }
+}
+
 .opportunities-benefits__icon {
   margin-bottom: 13px;
 }
 
 @media (max-width: 800px) {
   .opportunities-benefits__icon {
-    margin: 0 auto 5px;
+    margin: 0 0 5px;
   }
 }
 
@@ -563,5 +599,92 @@ main {
 @media (max-width: 565px) {
   .opportunities-benefits__label {
     flex-direction: column;
+  }
+}
+
+/* howto */
+.howto__inner {
+  padding: 50px 0;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .howto__inner {
+    padding: 30px 0;
+  }
+}
+
+.howto__title {
+  margin-bottom: 55px;
+}
+
+@media (max-width: 992px) {
+  .howto__title {
+    margin-bottom: 25px;
+  }
+}
+
+.howto__image {
+  margin-bottom: 70px;
+}
+
+.howto__image--sm {
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+.howto__row {
+  display: flex;
+  margin: 0 -35px;
+}
+
+@media (max-width: 992px) {
+  .howto__row {
+    flex-direction: column;
+  }
+}
+
+.howto__column {
+  flex: 0 1 33.33333%;
+  padding: 0 35px;
+}
+
+@media (max-width: 992px) {
+  .howto__column:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .howto__item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.howto__icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+  .howto__icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 20px 0 0;
+  }
+}
+
+.howto__text {
+  font-size: 22px;
+  line-height: 119.7%;
+  color: #272727;
+}
+
+@media (max-width: 600px) {
+  .howto__text {
+    font-size: 18px;
   }
 }

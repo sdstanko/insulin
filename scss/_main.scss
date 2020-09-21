@@ -488,3 +488,165 @@
 		}
 	}
 }
+
+/* modes */
+
+.modes {
+
+	@media (max-width: 992px) {
+		background-color: #fff;
+	}
+
+	&__inner {
+
+		padding: 65px 0;
+		background-color: #fff;
+		text-align: center;
+
+		@media (max-width: 992px) {
+			padding: 35px 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 20px;
+	}
+
+	&__descriprion {
+		max-width: 970px;
+		margin: 0 auto 40px;
+		font-size: 22px;
+		line-height: 119.7%;
+		color: #272727;
+
+		@media (max-width: 600px) {
+			margin: 0 auto 20px;
+			font-size: 18px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 40px;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 120%;
+		color: #001E46;
+
+		@media (max-width: 600px) {
+			margin-bottom: 30px;
+			font-size: 20px;
+		}
+	}
+
+	&__row {
+	
+		@media (min-width: 600px) {
+			display: flex;
+			justify-content: center;
+			margin: 0 -13px 50px;
+		}
+	}
+
+	&__column {
+		margin-bottom: 20px;
+		text-align: left;
+
+		@media (min-width: 600px) {
+			display: flex;
+			flex: 0 1 572px;
+			margin: 0;
+			padding: 0 13px;
+		}
+	}
+
+	&__item {
+		
+	}
+
+	&__info {
+		max-width: 1100px;
+		margin: 0 auto 45px;
+		font-size: 18px;
+		line-height: 139.7%;
+		color: #272727;
+
+		@media (max-width: 600px) {
+			margin: 0 auto 25px;
+			font-size: 14px;
+		}
+	}
+
+	&__btn {}
+}
+
+.item-modes {
+	padding: 30px 30px 30px 25px;
+	box-shadow: 0px 4px 24px rgba(0, 75, 135, 0.1);
+
+	@media (max-width: 992px) {
+		padding: 15px;
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+		margin-bottom: 25px;
+	}
+
+	&__icon {
+		margin-right: 10px;
+	}
+
+	&__label {
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 34px;
+		color: #001E46;
+	}
+
+	&__list {
+		margin: 0;
+	}
+
+	&__line {
+		position: relative;
+		padding-left: 28px;
+		font-size: 20px;
+		line-height: 139.7%;
+		color: #272727;
+
+		@media (max-width: 992px) {
+			font-size: 18px;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 8px;
+			height: 8px;
+			background-color: #004B87;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__params {
+		position: relative;
+		padding-left: 15px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 10px;
+			height: 2px;
+			background-color: #F7A800;
+		}
+	}
+}
+
